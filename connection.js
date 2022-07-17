@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const db_name = "mynewdatabase";
+const db_name = "issuetrackerdb";
 const url = `mongodb+srv://mmm:mmm@cluster0.gvyon.mongodb.net/${db_name}?retryWrites=true&w=majority`;
 
 // it will return promise

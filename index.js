@@ -1,15 +1,11 @@
 const express = require("express");
 
-
-
 const port = 5000;
 const app = express();
 
 
-
 // importing the userRouter
 const userRouter = require("./routers/userRouter");
-
 const cors = require("cors");
 
 // middleware to convert client json data to
@@ -35,3 +31,6 @@ app.get("/home", (req, res) => {
 });
 
 // starting the server
+app.listen(port, () => {
+  console.log("server started");
+});
