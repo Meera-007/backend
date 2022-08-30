@@ -23,7 +23,7 @@ router.post("/add", (req, res) => {
 
 // to fetch all the users data
 router.get("/getall", (req, res) => {
-  Model.find({})
+  Model.find({}).populate('assignedBy')
     .then((result) => {
       console.log("user Data fetched");
       res.json(result);

@@ -6,6 +6,8 @@ const app = express();
 
 // importing the userRouter
 const userRouter = require("./routers/userRouter");
+const issueRouter = require("./routers/issueRouter");
+const teamRouter = require("./routers/teamRouter");
 const cors = require("cors");
 
 // middleware to convert client json data to
@@ -15,6 +17,8 @@ app.use(express.json());
 app.use(cors({ origin: ["http://localhost:3000"] }));
 
 app.use("/user", userRouter);
+app.use("/issue", issueRouter);
+app.use('/team', teamRouter);
 
 
 app.get("/add", (req, res) => {
